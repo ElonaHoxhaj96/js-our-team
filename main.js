@@ -47,6 +47,14 @@ for (let i = 0; i < arrayteam.length; i++){
     let ruoloMembro = teamMemer.role;
     let photoMembro = teamMemer.image;
     console.log(nomeMembro, ruoloMembro, photoMembro);
+    //stampo in html
+    let contenitore = document.getElementById("container");
+    let card = ` <div class="row">
+                        <div class="col-4">${nomeMembro, ruoloMembro, photoMembro}</div>
+                        <div class="col-4"></div>
+                        <div class="col-4"></div>
+                    </div>`
+    contenitore.innerHTML += card;
+
 }
   
-
