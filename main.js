@@ -7,7 +7,6 @@
 // MILESTONE 2:
 // Stampare le stesse informazioni su DOM sottoforma di stringhe
 
-
 // creo il mio ciclo di object
 const arrayteam = [
     {
@@ -41,6 +40,13 @@ const arrayteam = [
         "image": "barbara-ramos-graphic-designer.jpg",
     }
 ];
-console.log(arrayteam);
+// ciclo tuuti i membri per stampargli singolarmente 
+for (let i = 0; i < arrayteam.length; i++){
+    let teamMemer = arrayteam[i];
+    let nomeMembro = teamMemer.nomeECognome;
+    let ruoloMembro = teamMemer.role;
+    let photoMembro = teamMemer.image;
+    console.log(nomeMembro, ruoloMembro, photoMembro);
+}
   
 
