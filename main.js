@@ -40,6 +40,8 @@ const arrayteam = [
         "image": "barbara-ramos-graphic-designer.jpg",
     }
 ];
+//seleziono il contenirore in pagina
+let riga  = document.querySelector(".cards_member");
 // ciclo tuuti i membri per stampargli singolarmente 
 for (let i = 0; i < arrayteam.length; i++){
     let teamMemer = arrayteam[i];
@@ -47,14 +49,11 @@ for (let i = 0; i < arrayteam.length; i++){
     let ruoloMembro = teamMemer.role;
     let photoMembro = teamMemer.image;
     console.log(nomeMembro, ruoloMembro, photoMembro);
-    //stampo in html
-    let contenitore = document.getElementById("container");
-    let card = ` <div class="row">
-                        <div class="col-4">${nomeMembro, ruoloMembro, photoMembro}</div>
-                        <div class="col-4"></div>
-                        <div class="col-4"></div>
-                    </div>`
-    contenitore.innerHTML += card;
 
+
+    let card = `<div class="col-4"> ${nomeMembro + ' - '+  ruoloMembro + ' - ' + photoMembro} </div>`;
+    console.log(card);
+    riga.innerHTML += card;
 }
+  
   
