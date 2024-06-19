@@ -7,7 +7,7 @@
 // MILESTONE 2:
 // Stampare le stesse informazioni su DOM sottoforma di stringhe
 
-// creo il mio ciclo di object
+// creo un array di object per definire i membri del mio team
 const arrayteam = [
     {
         "nomeECognome": "Wayne Barnett",
@@ -42,7 +42,7 @@ const arrayteam = [
 ];
 //seleziono il contenirore in pagina
 let riga  = document.querySelector(".cards_member");
-// ciclo tuuti i membri per stampargli singolarmente 
+// ciclo tutti i membri per stampargli singolarmente 
 for (let i = 0; i < arrayteam.length; i++){
     let teamMemer = arrayteam[i];
     let nomeMembro = teamMemer.nomeECognome;
@@ -50,8 +50,8 @@ for (let i = 0; i < arrayteam.length; i++){
     let photoMembro = teamMemer.image;
     console.log(nomeMembro, ruoloMembro, photoMembro);
 
-
-    let card = `<div class="col-4"> ${nomeMembro + ' - '+  ruoloMembro + ' - ' + photoMembro} </div>`;
+    //stampo in pagina i membri del team 
+    let card = `<div class="col-4 flex"> ${nomeMembro + ' - '+  ruoloMembro + ' - ' + photoMembro} </div>`;
     console.log(card);
     riga.innerHTML += card;
 }
